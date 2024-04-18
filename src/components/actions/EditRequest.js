@@ -45,7 +45,7 @@ const EditRequest = () => {
     senderName: data.senderName,
     option: data.option,
   };
-
+  console.log(initialValues);
   const handleFormSubmit = async (values) => {
     try {
       const RequestBody = { ...values, id: id };
@@ -95,7 +95,7 @@ const EditRequest = () => {
                 fullWidth
                 variant="filled"
                 type="text"
-                label="Party Name"
+                label="Client Name"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.partyName ? values.partyName : ""}
@@ -148,6 +148,7 @@ const EditRequest = () => {
               <TextField
                 fullWidth
                 variant="filled"
+                label="Delivery Date"
                 type="date"
                 onBlur={handleBlur}
                 onChange={handleChange}
@@ -160,8 +161,8 @@ const EditRequest = () => {
               <TextField
                 fullWidth
                 variant="filled"
-                type="text"
-                label="Time"
+                type="time"
+                label="Delivery Time"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.time ? values.time : ""}
@@ -187,7 +188,7 @@ const EditRequest = () => {
                 fullWidth
                 variant="filled"
                 type="text"
-                label="Option"
+                label="Delivery Option"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.option ? values.option : ""}

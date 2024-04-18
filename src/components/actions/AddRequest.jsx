@@ -142,7 +142,7 @@ const AddRequest = () => {
               <TextField
                 fullWidth
                 variant="filled"
-                type="text"
+                type="time"
                 label="Time"
                 onBlur={handleBlur}
                 onChange={handleChange}
