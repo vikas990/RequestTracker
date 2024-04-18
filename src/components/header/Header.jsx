@@ -27,7 +27,7 @@ const Header = () => {
           if (routeChange === "/") {
             navigate("/add");
             setRouteChange("/add");
-          } else {
+          } else if (routeChange === "/add") {
             navigate("/");
             setRouteChange("/");
           }
